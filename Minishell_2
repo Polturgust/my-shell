@@ -1,0 +1,6 @@
+NAME	=	mysh
+all		:	$(NAME)
+$(NAME)	:	$(OBJS)
+		@gcc $(OBJS) -o $(NAME) $(CFLAGS)
+		cp $(NAME) tests/
+		@rm $(NAME)
