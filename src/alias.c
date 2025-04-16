@@ -21,10 +21,32 @@ static data_t *add_value(char *line)
     return data;
 }
 
+int test_alias(char *line)
+{
+    char **arr = my_str_to_word_array(line, " ");
+    char coat = 0;
+    data_t *data = NULL;
+
+    for (linked_list_t *i = *get_alias(); i; i = i->next){
+        data = (data_t *)i->data;
+        if (my_strcmp(arr[1], data->var) == 0){
+            free(data->data);
+            free(data->var);
+            free(data);
+            i->data = add_value(line);
+            return 2;
+        }
+    }
+    free_tab(arr);
+    if (coat != 2 && coat != 0)
+        return 0;
+    return 1;
+}
+
 linked_list_t **get_alias(void)
 {
     static linked_list_t *alias = NULL;
-    FILE *file = fopen("myshrc", "r");
+    FILE *file = fopen(".myshrc", "r");
     char *line = NULL;
     size_t size = 0;
 
@@ -35,6 +57,7 @@ linked_list_t **get_alias(void)
     while (getline(&line, &size, file) != -1)
         if (my_strncmp("alias ", line, 6) == 0)
             push_front(&alias, add_value(line));
+    fclose(file);
     return &alias;
 }
 
@@ -44,6 +67,7 @@ int check_alias(char *arg, char **env)
     int retval = 0;
 
     for (linked_list_t *i = *get_alias(); i; i = i->next){
+        printf("%s\n", ((data_t *)i->data)->var);
         if (my_strcmp(arr[0], ((data_t *)i->data)->var) == 0){
             free(arr[0]);
             arr[0] = my_strdup(((data_t *)i->data)->data);
@@ -82,8 +106,14 @@ char *arr_to_str(char **arr, char sep)
 int aliases(__attribute__((unused)) linked_list_t **list, char **arr)
 {
     char *line_alias = arr_to_str(arr, ' ');
+    char test = test_alias(line_alias);
 
-    push_front(get_alias(), add_value(line_alias));
+    if (!test){
+        free(line_alias);
+        return 84;
+    }
+    if (test == 1)
+        push_front(get_alias(), add_value(line_alias));
     free(line_alias);
     return 0;
 }
