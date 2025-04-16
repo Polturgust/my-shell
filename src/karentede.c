@@ -11,6 +11,6 @@
 int karentede(__attribute__((unused)) linked_list_t **list,
     __attribute__((unused)) char **argv)
 {
-    printf("Life, The Universe and Everything\n");
+    write(2, "caca\n", 5);
     return 42;
 }

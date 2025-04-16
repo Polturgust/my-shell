@@ -165,5 +165,6 @@ int main(int argc, char **argv, char **env)
         }
     ret = minishell(env);
     destroy_env(create_env(env));
+    destroy_env(get_alias());
     return ret;
 }
