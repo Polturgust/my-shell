@@ -20,6 +20,7 @@ typedef struct data_s {
     char *data;
 } data_t;
 
+int minishell(char **env);
 int karentede(linked_list_t **list, char **argv);
 char *create_path(char *arg);
 char test_redir(char *argv, char **env);

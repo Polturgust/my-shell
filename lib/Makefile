@@ -13,8 +13,6 @@ clean	:
 	@make clean -C my/
 	@make clean -C lib_list/
 
-fclean	:	clean
+fclean	:
 	@make fclean -C my/
 	@make fclean -C lib_list/
-
-re	: fclean all
