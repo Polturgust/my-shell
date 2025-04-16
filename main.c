@@ -16,7 +16,6 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <unistd.h>
-int minishell(char **env);
 
 int main(int argc, char **argv, char **env)
 {

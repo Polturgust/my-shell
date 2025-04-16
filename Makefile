@@ -62,4 +62,3 @@ unit_tests: clean buildlib
 
 tests_run: unit_tests
 		@./unit_tests && gcovr
-

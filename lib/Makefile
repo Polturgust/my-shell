@@ -16,4 +16,3 @@ clean	:
 fclean	:
 	@make fclean -C my/
 	@make fclean -C lib_list/
-
