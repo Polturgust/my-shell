@@ -67,7 +67,6 @@ int check_alias(char *arg, char **env)
     int retval = 0;
 
     for (linked_list_t *i = *get_alias(); i; i = i->next){
-        printf("%s\n", ((data_t *)i->data)->var);
         if (my_strcmp(arr[0], ((data_t *)i->data)->var) == 0){
             free(arr[0]);
             arr[0] = my_strdup(((data_t *)i->data)->data);
