@@ -8,7 +8,8 @@
 #include "list.h"
 #include "mysh.h"
 
-int karentede(linked_list_t **list, char **argv)
+int karentede(__attribute__((unused)) linked_list_t **list,
+    __attribute__((unused)) char **argv)
 {
     printf("Life, The Universe and Everything\n");
     return 42;

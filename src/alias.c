@@ -5,6 +5,7 @@
 ** aliases.c
 */
 
+#include "list.h"
 #include "mysh.h"
 
 static data_t *add_value(char *line)
@@ -36,6 +37,23 @@ linked_list_t **get_alias(void)
         if (my_strncmp("alias ", line, 6) == 0)
             push_front(&alias, add_value(line));
     return &alias;
+}
+
+int check_alias(char *arg, char **env)
+{
+    char **arr = my_str_to_word_array(arg, " ");
+
+    for (linked_list_t *i = *get_alias(); i; i = i->next){
+        printf("%s\n", arr[0]);
+        if (my_strcmp(arr[0], ((data_t *)i->data)->var) == 0){
+            free(arr[0]);
+            arr[0] = my_strdup(((data_t *)i->data)->data);
+        }
+    }
+    free(arg);
+    arg = arr_to_str(arr, ' ');
+    free_tab(arr);
+    return execcommand(arg, env);
 }
 
 char *arr_to_str(char **arr, char sep)

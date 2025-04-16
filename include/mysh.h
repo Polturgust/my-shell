@@ -20,6 +20,9 @@ typedef struct data_s {
     char *data;
 } data_t;
 
+char *arr_to_str(char **arr, char sep);
+int use_children(char **env, char **argv);
+int check_alias(char *arr, char **env);
 linked_list_t **get_alias(void);
 int aliases(linked_list_t **list, char **arr);
 int karentede(linked_list_t **list, char **argv);

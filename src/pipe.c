@@ -15,7 +15,7 @@ int execute_fonc(char *line, char **env)
 
     retval = test_builtin(line, env);
     if (retval == -1)
-        retval = execcommand(line, env);
+        retval = check_alias(line, env);
     return retval;
 }
 
