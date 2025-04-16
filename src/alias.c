@@ -10,13 +10,12 @@
 
 static data_t *add_value(char *line)
 {
-    char **arr = my_str_to_word_array(line, "=\"\n");
+    char **arr = my_str_to_word_array(line, " =\"\n");
     char **val = NULL;
     data_t *data = malloc(sizeof(data_t));
 
-    data->data = my_strdup(arr[1]);
-    val = my_str_to_word_array(arr[0], " ");
-    data->var = my_strdup(val[1]);
+    data->data = arr_to_str(&arr[2], ' ');
+    data->var = my_strdup(arr[1]);
     free_tab(val);
     free_tab(arr);
     return data;
