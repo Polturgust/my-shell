@@ -4,98 +4,176 @@
       "/usr/bin/cc",
       "-I./include/",
       "-g3",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "mysh.o",
       "mysh.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/mysh.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/mysh.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/mysh.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/mysh.o"
   },
   {
     "arguments": [
       "/usr/bin/cc",
       "-I./include/",
       "-g3",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "src/signal.o",
       "src/signal.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/signal.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/signal.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/signal.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/signal.o"
   },
   {
     "arguments": [
       "/usr/bin/cc",
       "-I./include/",
       "-g3",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "src/env.o",
       "src/env.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/env.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/env.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/env.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/env.o"
   },
   {
     "arguments": [
       "/usr/bin/cc",
       "-I./include/",
       "-g3",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "src/env2.o",
       "src/env2.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/env2.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/env2.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/env2.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/env2.o"
   },
   {
     "arguments": [
       "/usr/bin/cc",
       "-I./include/",
       "-g3",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "src/cd.o",
       "src/cd.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/cd.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/cd.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/cd.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/cd.o"
   },
   {
     "arguments": [
       "/usr/bin/cc",
       "-I./include/",
       "-g3",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "src/builtin.o",
       "src/builtin.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/builtin.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/builtin.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/builtin.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/builtin.o"
   },
   {
     "arguments": [
       "/usr/bin/cc",
       "-I./include/",
       "-g3",
+      "-Wall",
+      "-Wextra",
       "-c",
       "-o",
       "src/pipe.o",
       "src/pipe.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/pipe.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/src/pipe.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/pipe.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/pipe.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-I./include/",
+      "-g3",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "src/redirect.o",
+      "src/redirect.c"
+    ],
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/redirect.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/redirect.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-I./include/",
+      "-g3",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "src/modif_prompt.o",
+      "src/modif_prompt.c"
+    ],
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/modif_prompt.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/modif_prompt.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-I./include/",
+      "-g3",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "src/karentede.o",
+      "src/karentede.c"
+    ],
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/karentede.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/karentede.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-I./include/",
+      "-g3",
+      "-Wall",
+      "-Wextra",
+      "-c",
+      "-o",
+      "src/alias.o",
+      "src/alias.c"
+    ],
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/alias.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/src/alias.o"
   },
   {
     "arguments": [
@@ -106,9 +184,9 @@
       "my_putstr.o",
       "my_putstr.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_putstr.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_putstr.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_putstr.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_putstr.o"
   },
   {
     "arguments": [
@@ -119,9 +197,9 @@
       "my_malloc.o",
       "my_malloc.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_malloc.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_malloc.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_malloc.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_malloc.o"
   },
   {
     "arguments": [
@@ -132,9 +210,9 @@
       "my_str_isnum.o",
       "my_str_isnum.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_str_isnum.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_str_isnum.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_str_isnum.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_str_isnum.o"
   },
   {
     "arguments": [
@@ -145,9 +223,9 @@
       "my_revstr.o",
       "my_revstr.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_revstr.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_revstr.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_revstr.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_revstr.o"
   },
   {
     "arguments": [
@@ -158,9 +236,9 @@
       "my_str_isprintable.o",
       "my_str_isprintable.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_str_isprintable.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_str_isprintable.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_str_isprintable.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_str_isprintable.o"
   },
   {
     "arguments": [
@@ -171,9 +249,9 @@
       "my_strdup.o",
       "my_strdup.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strdup.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strdup.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strdup.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strdup.o"
   },
   {
     "arguments": [
@@ -184,9 +262,9 @@
       "my_showmem.o",
       "my_showmem.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_showmem.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_showmem.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_showmem.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_showmem.o"
   },
   {
     "arguments": [
@@ -197,9 +275,9 @@
       "my_str_isupper.o",
       "my_str_isupper.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_str_isupper.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_str_isupper.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_str_isupper.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_str_isupper.o"
   },
   {
     "arguments": [
@@ -210,9 +288,9 @@
       "my_compute_power_rec.o",
       "my_compute_power_rec.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_compute_power_rec.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_compute_power_rec.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_compute_power_rec.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_compute_power_rec.o"
   },
   {
     "arguments": [
@@ -223,9 +301,9 @@
       "my_strlen.o",
       "my_strlen.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strlen.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strlen.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strlen.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strlen.o"
   },
   {
     "arguments": [
@@ -236,9 +314,9 @@
       "my_compute_square_root.o",
       "my_compute_square_root.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_compute_square_root.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_compute_square_root.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_compute_square_root.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_compute_square_root.o"
   },
   {
     "arguments": [
@@ -249,9 +327,9 @@
       "my_sort_int_array.o",
       "my_sort_int_array.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_sort_int_array.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_sort_int_array.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_sort_int_array.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_sort_int_array.o"
   },
   {
     "arguments": [
@@ -262,9 +340,9 @@
       "my_strlowcase.o",
       "my_strlowcase.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strlowcase.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strlowcase.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strlowcase.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strlowcase.o"
   },
   {
     "arguments": [
@@ -275,9 +353,9 @@
       "my_find_prime_sup.o",
       "my_find_prime_sup.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_find_prime_sup.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_find_prime_sup.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_find_prime_sup.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_find_prime_sup.o"
   },
   {
     "arguments": [
@@ -288,9 +366,9 @@
       "my_strcapitalize.o",
       "my_strcapitalize.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strcapitalize.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strcapitalize.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strcapitalize.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strcapitalize.o"
   },
   {
     "arguments": [
@@ -301,9 +379,9 @@
       "my_strncat.o",
       "my_strncat.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strncat.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strncat.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strncat.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strncat.o"
   },
   {
     "arguments": [
@@ -314,9 +392,9 @@
       "my_getnbr.o",
       "my_getnbr.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_getnbr.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_getnbr.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_getnbr.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_getnbr.o"
   },
   {
     "arguments": [
@@ -327,9 +405,9 @@
       "my_strcat.o",
       "my_strcat.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strcat.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strcat.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strcat.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strcat.o"
   },
   {
     "arguments": [
@@ -340,9 +418,9 @@
       "my_strncmp.o",
       "my_strncmp.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strncmp.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strncmp.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strncmp.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strncmp.o"
   },
   {
     "arguments": [
@@ -353,9 +431,9 @@
       "my_isneg.o",
       "my_isneg.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_isneg.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_isneg.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_isneg.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_isneg.o"
   },
   {
     "arguments": [
@@ -366,9 +444,9 @@
       "my_strcmp.o",
       "my_strcmp.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strcmp.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strcmp.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strcmp.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strcmp.o"
   },
   {
     "arguments": [
@@ -379,9 +457,9 @@
       "my_strncpy.o",
       "my_strncpy.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strncpy.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strncpy.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strncpy.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strncpy.o"
   },
   {
     "arguments": [
@@ -392,9 +470,9 @@
       "my_is_prime.o",
       "my_is_prime.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_is_prime.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_is_prime.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_is_prime.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_is_prime.o"
   },
   {
     "arguments": [
@@ -405,9 +483,9 @@
       "my_strcpy.o",
       "my_strcpy.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strcpy.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strcpy.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strcpy.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strcpy.o"
   },
   {
     "arguments": [
@@ -418,9 +496,9 @@
       "my_strstr.o",
       "my_strstr.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strstr.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strstr.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strstr.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strstr.o"
   },
   {
     "arguments": [
@@ -431,9 +509,9 @@
       "my_putchar.o",
       "my_putchar.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_putchar.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_putchar.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_putchar.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_putchar.o"
   },
   {
     "arguments": [
@@ -444,9 +522,9 @@
       "my_str_isalpha.o",
       "my_str_isalpha.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_str_isalpha.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_str_isalpha.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_str_isalpha.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_str_isalpha.o"
   },
   {
     "arguments": [
@@ -457,9 +535,9 @@
       "my_strupcase.o",
       "my_strupcase.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strupcase.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strupcase.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strupcase.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strupcase.o"
   },
   {
     "arguments": [
@@ -470,9 +548,9 @@
       "my_put_nbr.o",
       "my_put_nbr.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_put_nbr.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_put_nbr.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_put_nbr.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_put_nbr.o"
   },
   {
     "arguments": [
@@ -483,9 +561,9 @@
       "my_str_islower.o",
       "my_str_islower.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_str_islower.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_str_islower.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_str_islower.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_str_islower.o"
   },
   {
     "arguments": [
@@ -496,9 +574,9 @@
       "my_swap.o",
       "my_swap.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_swap.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_swap.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_swap.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_swap.o"
   },
   {
     "arguments": [
@@ -509,9 +587,9 @@
       "str_to.o",
       "str_to.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/str_to.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/str_to.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/str_to.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/str_to.o"
   },
   {
     "arguments": [
@@ -522,9 +600,9 @@
       "my_strconcat.o",
       "my_strconcat.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strconcat.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/my_strconcat.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strconcat.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/my_strconcat.o"
   },
   {
     "arguments": [
@@ -535,9 +613,9 @@
       "free_tab.o",
       "free_tab.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/free_tab.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/my/free_tab.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/free_tab.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/my/free_tab.o"
   },
   {
     "arguments": [
@@ -547,9 +625,9 @@
       "src/link_list.o",
       "src/link_list.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/lib_list",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/lib_list/src/link_list.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/lib_list/src/link_list.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/lib_list",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/lib_list/src/link_list.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/lib_list/src/link_list.o"
   },
   {
     "arguments": [
@@ -559,8 +637,8 @@
       "src/link_list2.o",
       "src/link_list2.c"
     ],
-    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/lib_list",
-    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/lib_list/src/link_list2.c",
-    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-minishell2-raphael.dedack/lib/lib_list/src/link_list2.o"
+    "directory": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/lib_list",
+    "file": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/lib_list/src/link_list2.c",
+    "output": "/home/cannou/delivery/minishell/B-PSU-200-NCE-2-1-42sh-florent.serra/lib/lib_list/src/link_list2.o"
   }
 ]

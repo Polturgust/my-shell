@@ -15,6 +15,7 @@ SRCS	=	mysh.c \
 			src/redirect.c \
 			src/modif_prompt.c \
 			src/karentede.c \
+			src/alias.c \
 
 NAME	=	mysh
 
