@@ -5,6 +5,8 @@
 ## f
 ##
 
+MAIN = main.c \
+
 SRCS	=	mysh.c \
 			src/signal.c \
 			src/env.c \
@@ -14,15 +16,19 @@ SRCS	=	mysh.c \
 			src/pipe.c \
 			src/redirect.c \
 			src/modif_prompt.c \
-			src/karentede.c \
+#			src/karentede.c \
 
 NAME	=	mysh
 
-OBJS	=	$(SRCS:.c=.o)
+OBJS	=	$(SRCS:.c=.o) $(MAIN:.c=.o)
 
-CFLAGS	=	-I./include/ -g3 -L./lib -lmy -llist -Wall -Wextra
+LIB =  -L./lib -lmy -llist
 
-all		:	$(NAME)
+INCLUDE = -I./include/
+
+CFLAGS	= $(INCLUDE) -g3 $(LIB) -Wall -Wextra
+
+all		: buildlib	$(NAME)
 
 $(NAME)	:	$(OBJS)
 		@make -C lib
@@ -30,11 +36,30 @@ $(NAME)	:	$(OBJS)
 		cp $(NAME) tests/
 
 clean	:
-		@make clean -C lib
-		@rm -rf $(OBJS)
+		@rm -fr $(OBJS)
+		@rm -fr *.gcno
+		@rm -fr *.gcda
 
-fclean	:	clean
-		@make fclean -C lib
-		@rm $(NAME)
+fclean	:	clean fcleanlib
+		@rm -fr $(NAME) $(TNAME)
+
+buildlib:
+		@make -C ./lib/
+
+fcleanlib:
+		@make fclean -C ./lib/
 
 re		:	fclean all
+
+TSRC = tests/tests.c \
+
+TNAME = unit_tests
+
+TLIB = $(LIB) -lcriterion --coverage
+
+unit_tests: clean buildlib
+		@gcc $(TSRC) $(SRCS) -o $(TNAME) $(INCLUDE) $(TLIB)
+
+tests_run: unit_tests
+		@./unit_tests && gcovr
+
