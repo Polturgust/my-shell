@@ -9,6 +9,8 @@
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
+    #include <unistd.h>
+    #include <limits.h>
 
 typedef struct s_var {
     char *key;
