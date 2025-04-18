@@ -6,6 +6,7 @@
 */
 #ifndef VARIABLES_H
     #define VARIABLES_H
+    # define PATH_MAX 4096
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
