@@ -28,3 +28,11 @@ void update_cwd(var_t **vars)
     if (cwdcmd && cwdcmd->value)
         system(cwdcmd->value);
 }
+
+void run_precmd(var_t *vars)
+{
+    var_t *precmd = find_variable(vars, "precmd");
+
+    if (precmd && precmd->value)
+        system(precmd->value);
+}
