@@ -95,9 +95,10 @@ char built_pipe(char *line_cmd, char **env)
         write(2, "Invalid null command.\n", 22);
         return 84;
     }
-    if (len_tab == 1)
+    if (len_tab == 1){
+        free_tab(cmd_split);
         return test_redir(line_cmd, env);
-    else
+    } else
         retval = exec_pipe(cmd_split, len_tab, env);
     free_tab(cmd_split);
     return retval;

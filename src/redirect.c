@@ -23,7 +23,7 @@ char rd_gauche(char *argv, char **env)
     if (fd == -1)
         return 84;
     dup2(fd, STDIN_FILENO);
-    retval = execute_fonc(arr[0], env);
+    retval = check_alias(arr[0], env);
     free_tab(arr);
     free_tab(space);
     close(fd);
@@ -43,7 +43,7 @@ char d_droite(char *argv, char **env)
         return 84;
     fd = open(*space, O_CREAT | O_RDWR | O_APPEND, 00666);
     dup2(fd, STDOUT_FILENO);
-    retval = execute_fonc(arr[0], env);
+    retval = check_alias(arr[0], env);
     close(fd);
     dup2(out, STDOUT_FILENO);
     free_tab(arr);
@@ -92,7 +92,7 @@ char test_redir(char *argv, char **env)
         if (nb_red[i] > 0)
             return red[i](argv, env);
     }
-    return execute_fonc(argv, env);
+    return check_alias(argv, env);
 }
 
 char test_semi(char *line, char **env)
