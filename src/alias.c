@@ -29,6 +29,7 @@ static int parse_alias(char *line)
         free_tab(tmp);
         return 1;
     }
+    free_tab(tmp);
     return 0;
 }
 
@@ -68,6 +69,7 @@ linked_list_t **get_alias(void)
     while (getline(&line, &size, file) != -1)
         if (my_strncmp("alias ", line, 6) == 0 && !parse_alias(line))
             push_front(&alias, add_value(line));
+    free(line);
     fclose(file);
     return &alias;
 }
