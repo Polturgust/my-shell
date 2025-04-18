@@ -21,12 +21,26 @@ static data_t *add_value(char *line)
     return data;
 }
 
+static int parse_alias(char *line)
+{
+    char **tmp = my_str_to_word_array(line, "\" ");
+
+    if (len_arr(tmp) < 3){
+        free_tab(tmp);
+        return 1;
+    }
+    return 0;
+}
+
 int test_alias(char *line)
 {
     char **arr = my_str_to_word_array(line, " ");
-    char coat = 0;
     data_t *data = NULL;
 
+    if (parse_alias(line)){
+        free_tab(arr);
+        return 0;
+    }
     for (linked_list_t *i = *get_alias(); i; i = i->next){
         data = (data_t *)i->data;
         if (my_strcmp(arr[1], data->var) == 0){
@@ -38,8 +52,7 @@ int test_alias(char *line)
         }
     }
     free_tab(arr);
-    if (coat != 2 && coat != 0)
-        return 0;
+    push_front(get_alias(), add_value(line));
     return 1;
 }
 
@@ -53,7 +66,7 @@ linked_list_t **get_alias(void)
     if (!file)
         return &alias;
     while (getline(&line, &size, file) != -1)
-        if (my_strncmp("alias ", line, 6) == 0)
+        if (my_strncmp("alias ", line, 6) == 0 && !parse_alias(line))
             push_front(&alias, add_value(line));
     fclose(file);
     return &alias;
@@ -103,14 +116,11 @@ char *arr_to_str(char **arr, char sep)
 int aliases(__attribute__((unused)) linked_list_t **list, char **arr)
 {
     char *line_alias = arr_to_str(arr, ' ');
-    char test = test_alias(line_alias);
 
-    if (!test){
+    if (!test_alias(line_alias)){
         free(line_alias);
         return 84;
     }
-    if (test == 1)
-        push_front(get_alias(), add_value(line_alias));
     free(line_alias);
     return 0;
 }
