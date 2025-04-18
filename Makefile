@@ -16,9 +16,8 @@ SRCS	=	mysh.c \
 			src/pipe.c \
 			src/redirect.c \
 			src/modif_prompt.c \
-#			src/karentede.c \
 
-NAME	=	mysh
+NAME	=	42sh
 
 OBJS	=	$(SRCS:.c=.o) $(MAIN:.c=.o)
 
