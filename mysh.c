@@ -153,23 +153,6 @@ int minishell(char **env)
     free(line);
     return retval;
 }
-<<<<<<< HEAD
-||||||| 086c3d0
-
-int main(int argc, char **argv, char **env)
-{
-    int ret = 0;
-
-    if (argc == 2)
-        if (my_strcmp(argv[1], "-h") == 0){
-            write(1, "usage: ./mysh\n", 14);
-            return 0;
-        }
-    ret = minishell(env);
-    destroy_env(create_env(env));
-    return ret;
-}
-=======
 
 int main(int argc, char **argv, char **env)
 {
