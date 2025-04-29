@@ -103,7 +103,7 @@ char test_semi(char *line, char **env)
     if (!arr)
         return 84;
     for (int i = 0; arr[i]; i++){
-        retval = built_pipe(arr[i], env);
+        retval = my_and(arr[i], env);
     }
     free_tab(arr);
     return retval;

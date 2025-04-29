@@ -20,6 +20,8 @@ typedef struct data_s {
     char *data;
 } data_t;
 
+int my_or(char *line, char **env);
+int my_and(char *line, char **env);
 int minishell(char **env);
 char *arr_to_str(char **arr, char sep);
 int use_children(char **env, char **argv);

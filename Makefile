@@ -18,6 +18,7 @@ SRCS	=	mysh.c \
 			src/modif_prompt.c \
 			src/karentede.c \
 			src/alias.c \
+			src/and_or.c \
 
 NAME	=	42sh
 
