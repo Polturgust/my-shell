@@ -7,13 +7,13 @@
 #include <stdlib.h>
 #include "my.h"
 
-char *my_strdup(char *bozo)
+char *my_strdup(char *str)
 {
-    char *str;
+    char *res;
 
-    if (!bozo)
-        return bozo;
-    str = malloc(sizeof(char) * (my_strlen(bozo) + 1));
-    my_strcpy(str, bozo);
-    return str;
+    if (!str)
+        return str;
+    res = malloc(sizeof(char) * (my_strlen(str) + 1));
+    my_strcpy(res, str);
+    return res;
 }

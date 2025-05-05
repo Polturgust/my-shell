@@ -9,11 +9,11 @@
 
 void *my_malloc(int size)
 {
-    void *bozo;
+    void *to_malloc;
 
-    bozo = malloc(size);
+    to_malloc = malloc(size);
     for (int i = 0; i < size; i++) {
-        ((char *)bozo)[i] = 0;
+        ((char *)to_malloc)[i] = 0;
     }
-    return bozo;
+    return to_malloc;
 }

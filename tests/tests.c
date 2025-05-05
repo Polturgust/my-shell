@@ -11,6 +11,6 @@
 
 Test(my_str_isalpha, alpa_test)
 {
-    cr_expect(my_str_isalpha("zob") == 1, "zob is not alpanum ?");
-    cr_expect(my_str_isalpha("#zob") == 0, "#zob is alphanum ?");
+    cr_expect(my_str_isalpha("str") == 1, "str is not alpanum ?");
+    cr_expect(my_str_isalpha("#str") == 0, "#str is alphanum ?");
 }

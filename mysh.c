@@ -56,15 +56,15 @@ static void check_err(char *arg)
 int use_children(char **env, char **argv)
 {
     int status = 0;
-    int bozo = 0;
+    int res_child = 0;
     pid_t child = fork();
     char **freearr = argv;
 
     if (child == 0){
-        bozo = execve(argv[0], argv, env);
-        if (bozo == -1)
+        res_child = execve(argv[0], argv, env);
+        if (res_child == -1)
             check_err(argv[0]);
-        exit(bozo);
+        exit(res_child);
     }
     argv = NULL;
     free_tab(freearr);

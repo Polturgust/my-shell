@@ -7,8 +7,8 @@
 
 int my_showmem(char const *str, int size)
 {
-    int bozo = size;
-    char const *bozoname = str;
+    int mem = size;
+    char const *memname = str;
 
     return 0;
 }
