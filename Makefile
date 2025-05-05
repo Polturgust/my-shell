@@ -18,6 +18,7 @@ SRCS	=	mysh.c \
 			src/modif_prompt.c \
 			src/karentede.c \
 			src/alias.c \
+			src/history.c \
 
 NAME	=	42sh
 
@@ -29,12 +30,9 @@ INCLUDE = -I./include/
 
 CFLAGS	= $(INCLUDE) -g3 $(LIB) -Wall -Wextra
 
-all		: buildlib	$(NAME)
-
-$(NAME)	:	$(OBJS)
-		@make -C lib
+all		: buildlib	$(OBJS)
 		@gcc $(OBJS) -o $(NAME) $(CFLAGS)
-		cp $(NAME) tests/
+		@cp $(NAME) tests/
 
 clean	:
 		@rm -fr $(OBJS)
@@ -43,6 +41,7 @@ clean	:
 
 fclean	:	clean fcleanlib
 		@rm -fr $(NAME) $(TNAME)
+		@rm -rf tests/$(NAME)
 
 buildlib:
 		@make -C ./lib/

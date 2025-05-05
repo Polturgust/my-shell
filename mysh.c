@@ -145,6 +145,7 @@ int minishell(char **env)
             verif = prompt(&line, &l);
             continue;
         }
+        add_history(line);
         retval = test_semi(line, env);
         verif = prompt(&line, &l);
     }

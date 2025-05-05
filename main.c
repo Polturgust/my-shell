@@ -26,8 +26,10 @@ int main(int argc, char **argv, char **env)
             write(1, "usage: ./mysh\n", 14);
             return 0;
         }
+    get_history();
     ret = minishell(env);
     destroy_env(create_env(env));
     destroy_env(get_alias());
+    set_history();
     return ret;
 }

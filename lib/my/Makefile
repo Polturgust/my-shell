@@ -40,6 +40,7 @@ SRCS	=	my_putstr.c	\
 		str_to.c \
 		my_strconcat.c \
 		free_tab.c \
+		file.c \
 
 OBJS	=	$(SRCS:.c=.o)
 
@@ -57,6 +58,6 @@ clean	:
 
 fclean	:	clean
 		@rm -rf $(NAME)
-		@rm ../$(NAME)
+		@rm -rf ../$(NAME)
 
 re	:	fclean all
