@@ -11,12 +11,10 @@
 
 int execute_fonc(char *line, char **env)
 {
-    int retval = 0;
-
-    retval = test_builtin(line, env);
-    if (retval == -1)
-        retval = execcommand(line, env);
-    return retval;
+    exit_info()->ret_val = test_builtin(line, env);
+    if (exit_info()->ret_val == -1)
+        exit_info()->ret_val = execcommand(line, env);
+    return exit_info()->ret_val;
 }
 
 void not_first(int prev_fd, pid_t pid)
@@ -86,7 +84,6 @@ char built_pipe(char *line_cmd, char **env)
 {
     int len_tab = 0;
     char **cmd_split = my_str_to_word_array(line_cmd, PIPECHAR);
-    int retval = 0;
 
     if (!cmd_split)
         return 84;
@@ -99,7 +96,7 @@ char built_pipe(char *line_cmd, char **env)
         free_tab(cmd_split);
         return test_redir(line_cmd, env);
     } else
-        retval = exec_pipe(cmd_split, len_tab, env);
+        exit_info()->ret_val = exec_pipe(cmd_split, len_tab, env);
     free_tab(cmd_split);
-    return retval;
+    return exit_info()->ret_val;
 }

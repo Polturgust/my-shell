@@ -11,7 +11,7 @@
 
 int test_builtin(char *arg, char **env)
 {
-    char *builtin[] = {"env", "setenv", "unsetenv", "cd", "42", "alias",
+    char *builtin[] = {"env", "setenv", "unsetenv", "cd", "exit", "alias",
         NULL};
     int (*tab[])(linked_list_t **, char **) =
     {&penv, &etenv, &nsetenv, &set_cd, &my_exit, &aliases, NULL};
@@ -21,9 +21,11 @@ int test_builtin(char *arg, char **env)
     if (!arr)
         return 84;
     for (int i = 0; builtin[i]; i++)
-        if (my_strcmp(builtin[i], arr[0]) == 0){
+        if (my_strcmp(builtin[i], arr[0]) == 0)
             retval = tab[i](create_env(env), arr);
-        }
     free_tab(arr);
-    return retval;
+    if (retval == -1)
+        return -1;
+    exit_info()->ret_val = retval;
+    return exit_info()->ret_val;
 }
