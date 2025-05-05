@@ -27,7 +27,7 @@ int use_children(char **env, char **argv);
 int check_alias(char *arr, char **env);
 linked_list_t **get_alias(void);
 int aliases(linked_list_t **list, char **arr);
-int karentede(linked_list_t **list, char **argv);
+int my_exit(linked_list_t **list, char **argv);
 char *create_path(char *arg);
 char test_redir(char *argv, char **env);
 char test_semi(char *line, char **env);

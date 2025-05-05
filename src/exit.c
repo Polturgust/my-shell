@@ -1,15 +1,14 @@
 /*
 ** EPITECH PROJECT, 2025
-** 42.c
+** exit.c
 ** File description:
-** 42.c
+** exit.c
 */
 
 #include "list.h"
 #include "mysh.h"
 
-int karentede(__attribute__((unused)) linked_list_t **list,
-    __attribute__((unused)) char **argv)
+int my_exit(linked_list_t **list, char **argv)
 {
     write(2, "caca\n", 5);
     return 42;

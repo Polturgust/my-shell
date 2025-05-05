@@ -14,7 +14,7 @@ int test_builtin(char *arg, char **env)
     char *builtin[] = {"env", "setenv", "unsetenv", "cd", "42", "alias",
         NULL};
     int (*tab[])(linked_list_t **, char **) =
-    {&penv, &etenv, &nsetenv, &set_cd, &karentede, &aliases, NULL};
+    {&penv, &etenv, &nsetenv, &set_cd, &my_exit, &aliases, NULL};
     char **arr = my_str_to_word_array(arg, " \t");
     int retval = -1;
 
