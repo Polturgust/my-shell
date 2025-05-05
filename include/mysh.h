@@ -12,6 +12,7 @@
     #include <sys/wait.h>
     #include <sys/signal.h>
     #include <fcntl.h>
+    #include <string.h>
     #define TCSHENV "NLSPATH=/usr/bin/"
     #define PIPECHAR "|"
 
@@ -43,4 +44,9 @@ int etenv(linked_list_t **, char **);
 int penv(linked_list_t **, char **);
 void destroy_env(linked_list_t **);
 linked_list_t **create_env(char **);
+
+//history
+void get_history(void);
+void set_history(void);
+void add_history(char *cmd);
 #endif /* MYSH_H_ */
