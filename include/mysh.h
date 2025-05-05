@@ -16,6 +16,12 @@
     #define TCSHENV "NLSPATH=/usr/bin/"
     #define PIPECHAR "|"
 
+typedef struct exit_s {
+    bool do_exit;
+    int ret_val;
+} exit_t;
+exit_t *exit_info(void);
+
 typedef struct data_s {
     char *var;
     char *data;

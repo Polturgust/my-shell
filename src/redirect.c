@@ -15,7 +15,6 @@ char rd_gauche(char *argv, char **env)
     int fd = 0;
     int in = dup(STDIN_FILENO);
     char **space = my_str_to_word_array(arr[1], " \t");
-    int retval = 0;
 
     if (!arr)
         return 84;
@@ -23,12 +22,12 @@ char rd_gauche(char *argv, char **env)
     if (fd == -1)
         return 84;
     dup2(fd, STDIN_FILENO);
-    retval = check_alias(arr[0], env);
+    exit_info()->ret_val = check_alias(arr[0], env);
     free_tab(arr);
     free_tab(space);
     close(fd);
     dup2(in, STDIN_FILENO);
-    return retval;
+    return exit_info()->ret_val;
 }
 
 char d_droite(char *argv, char **env)
@@ -37,18 +36,17 @@ char d_droite(char *argv, char **env)
     int fd = 0;
     int out = dup(STDOUT_FILENO);
     char **space = my_str_to_word_array(arr[1], " \t");
-    int retval = 0;
 
     if (!arr)
         return 84;
     fd = open(*space, O_CREAT | O_RDWR | O_APPEND, 00666);
     dup2(fd, STDOUT_FILENO);
-    retval = check_alias(arr[0], env);
+    exit_info()->ret_val = check_alias(arr[0], env);
     close(fd);
     dup2(out, STDOUT_FILENO);
     free_tab(arr);
     free_tab(space);
-    return retval;
+    return exit_info()->ret_val;
 }
 
 char rd_droite(char *argv, char **env)
@@ -57,18 +55,17 @@ char rd_droite(char *argv, char **env)
     int fd = 0;
     int out = dup(STDOUT_FILENO);
     char **space = my_str_to_word_array(arr[1], " \t");
-    int retval = 0;
 
     if (!arr)
         return 84;
     fd = open(*space, O_CREAT | O_RDWR | O_TRUNC, 00666);
     dup2(fd, STDOUT_FILENO);
     close(fd);
-    retval = execute_fonc(arr[0], env);
+    exit_info()->ret_val = execute_fonc(arr[0], env);
     dup2(out, STDOUT_FILENO);
     free_tab(arr);
     free_tab(space);
-    return retval;
+    return exit_info()->ret_val;
 }
 
 char test_redir(char *argv, char **env)
@@ -98,13 +95,11 @@ char test_redir(char *argv, char **env)
 char test_semi(char *line, char **env)
 {
     char **arr = my_str_to_word_array(line, ";");
-    int retval = 0;
 
     if (!arr)
         return 84;
-    for (int i = 0; arr[i]; i++){
-        retval = built_pipe(arr[i], env);
-    }
+    for (int i = 0; arr[i]; i++)
+        exit_info()->ret_val = built_pipe(arr[i], env);
     free_tab(arr);
-    return retval;
+    return exit_info()->ret_val;
 }

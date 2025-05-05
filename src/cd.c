@@ -13,12 +13,12 @@
 
 int test_args(char **arg, int retval, char *pwd)
 {
-    struct stat rosignol;
+    struct stat st;
     int file = 0;
     char *str = my_strconcat(pwd, arg[1]);
 
-    file = stat(str, &rosignol);
-    if (file != -1 && !S_ISREG(rosignol.st_mode))
+    file = stat(str, &st);
+    if (file != -1 && !S_ISREG(st.st_mode))
         return 0;
     if (retval < -1){
         write(2, arg[1], my_strlen(arg[1]));
@@ -26,7 +26,7 @@ int test_args(char **arg, int retval, char *pwd)
             write(2, ": No such file or directory.\n", 29);
             return 1;
         }
-        if (S_ISREG(rosignol.st_mode)){
+        if (S_ISREG(st.st_mode)){
             write(2, ": Not a directory.\n", 19);
             return 1;
         }

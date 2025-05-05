@@ -136,21 +136,22 @@ int minishell(char **env)
 {
     char *line = NULL;
     size_t l = 0;
-    long retval = 0;
     int verif = prompt(&line, &l);
 
-    while (verif != -1 && my_strcmp(line, "exit\n") != 0) {
+    while (verif != -1 && !exit_info()->do_exit) {
         line[my_strlen(line) - 1] = '\0';
         if (!line || *line == '\0'){
             verif = prompt(&line, &l);
             continue;
         }
         add_history(line);
-        retval = test_semi(line, env);
+        exit_info()->ret_val = test_semi(line, env);
+        if (exit_info()->do_exit)
+            break;
         verif = prompt(&line, &l);
     }
-    if ((verif == -1 || my_strcmp(line, "exit\n") == 0) && isatty(0))
+    if ((verif == -1 || exit_info()->do_exit) && isatty(0))
         write(1, "exit\n", 5);
     free(line);
-    return retval;
+    return exit_info()->ret_val;
 }
