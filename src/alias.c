@@ -79,6 +79,8 @@ int check_alias(char *arg, char **env)
     char **arr = my_str_to_word_array(arg, " ");
     int retval = 0;
 
+    if (!arr)
+        return 84;
     for (linked_list_t *i = *get_alias(); i; i = i->next){
         if (my_strcmp(arr[0], ((data_t *)i->data)->var) == 0){
             free(arr[0]);

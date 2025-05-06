@@ -62,7 +62,7 @@ char **my_str_to_word_array(char *str, char *slice)
     int k = 0;
     int j = 0;
 
-    if (!str)
+    if (!str || nbr_word(str, slice) == 0)
         return NULL;
     arr = malloc(sizeof(char *) * (nbr_word(str, slice) + 1));
     for (int i = 0; i < my_strlen(str); i++){
