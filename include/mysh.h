@@ -8,6 +8,7 @@
     #define MYSH_H_
     #include "my.h"
     #include "list.h"
+    #include "variables.h"
     #include <sys/stat.h>
     #include <sys/wait.h>
     #include <sys/signal.h>
