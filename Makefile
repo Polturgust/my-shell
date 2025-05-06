@@ -22,6 +22,7 @@ SRCS	=	mysh.c \
 			src/variables/builtin_set_unset.c \
 			src/variables/special_variables.c \
 			src/variables/variables.c \
+			src/globbings.c \
 
 NAME	=	42sh
 
