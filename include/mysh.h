@@ -56,4 +56,8 @@ linked_list_t **create_env(char **);
 void get_history(void);
 void set_history(void);
 void add_history(char *cmd);
+
+//globbings
+char **do_globbings(char **argv);
+
 #endif /* MYSH_H_ */
