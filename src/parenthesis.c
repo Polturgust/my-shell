@@ -61,6 +61,7 @@ int skip_str(char *line, int *count, int idc)
     for (; line[*count + idc]; *count += 1){
         is_skip(line[*count + idc]);
         printf("%i\n", verif);
+        verif = ((skip_t *)j->data)->count;
         for (linked_list_t *j = get_skip(); j && verif == 0; j = j->next){
             verif = ((skip_t *)j->data)->count;
         }
