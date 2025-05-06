@@ -19,6 +19,9 @@ SRCS	=	mysh.c \
 			src/exit.c \
 			src/alias.c \
 			src/history.c \
+			src/variables/builtin_set_unset.c \
+			src/variables/special_variables.c \
+			src/variables/variables.c \
 
 NAME	=	42sh
 
