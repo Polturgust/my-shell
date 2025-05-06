@@ -40,8 +40,8 @@ void run_precmd(var_t *vars)
 int handle_eof(var_t *vars)
 {
     var_t *ignore = find_variable(vars, "ignoreeof");
-    if (ignore)
-    {
+
+    if (ignore) {
         printf("\nUse 'exit' to leave the shell.\n");
         return 0;
     }
