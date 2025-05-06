@@ -99,7 +99,6 @@ static char *verifpath(char *exec, char *arg)
 int execcommand(char *argv, char **env)
 {
     char **arg = my_str_to_word_array(argv, " \t");
-    char *freeable = NULL;
     char *buffer = NULL;
     struct stat size;
     linked_list_t *i = *create_env(env);
@@ -115,9 +114,8 @@ int execcommand(char *argv, char **env)
         free_tab(arg);
         return -1;
     }
-    freeable = arg[0];
+    free(arg[0]);
     arg[0] = buffer;
-    free(freeable);
     return use_children(env, arg) / 256;
 }
 
