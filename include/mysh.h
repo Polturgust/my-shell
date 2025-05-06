@@ -13,8 +13,18 @@
     #include <sys/signal.h>
     #include <fcntl.h>
     #include <string.h>
+    #include <time.h>
+    #include <unistd.h>
+    #include <stdio.h>
+    #include <stdlib.h>
     #define TCSHENV "NLSPATH=/usr/bin/"
     #define PIPECHAR "|"
+
+typedef struct history_s {
+    char *cmd;
+    unsigned long id;
+    time_t time;
+} history_t;
 
 typedef struct exit_s {
     bool do_exit;
@@ -34,6 +44,7 @@ int check_alias(char *arr, char **env);
 linked_list_t **get_alias(void);
 int aliases(linked_list_t **list, char **arr);
 int my_exit(linked_list_t **list, char **argv);
+int history(linked_list_t **env, char **arg);
 char *create_path(char *arg);
 char test_redir(char *argv, char **env);
 char test_semi(char *line, char **env);
@@ -52,7 +63,6 @@ void destroy_env(linked_list_t **);
 linked_list_t **create_env(char **);
 
 //history
-void get_history(void);
-void set_history(void);
 void add_history(char *cmd);
+void set_history(char *path);
 #endif /* MYSH_H_ */
