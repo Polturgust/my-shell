@@ -8,7 +8,7 @@
 #include "mysh.h"
 #include <glob.h>
 
-int has_globbing(const char *str)
+static int has_globbing(const char *str)
 {
     for(int i = 0; str[i]; i++)
         if (str[i] == '*' || str[i] == '?' || str[i] == '[')
@@ -16,7 +16,7 @@ int has_globbing(const char *str)
     return 0;
 }
 
-int count_matches(glob_t *glob_result)
+static int count_matches(glob_t *glob_result)
 {
     int count = 0;
 
@@ -25,7 +25,7 @@ int count_matches(glob_t *glob_result)
     return count;
 }
 
-char **append_glob_result(glob_t *glob_result)
+static char **append_glob_result(glob_t *glob_result)
 {
     int count = count_matches(glob_result);
     char **result = malloc(sizeof(char *) * (count + 1));
