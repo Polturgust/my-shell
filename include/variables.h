@@ -28,4 +28,10 @@ void free_variables(var_t *vars);
 int builtin_set(char **args, var_t **vars);
 int builtin_unset(char **args, var_t **vars);
 
+void init_special_variables(var_t **vars);
+void update_cwd(var_t **vars);
+void run_precmd(var_t *vars);
+int handle_eof(var_t *vars);
+
+
 #endif /* VARIABLES_H */
