@@ -43,14 +43,22 @@ char **do_globbings(char **argv)
     char **new_args = NULL;
     glob_t glob_result;
     int flags = 0;
+    int ret;
 
     glob_result.gl_pathc = 0;
     glob_result.gl_pathv = NULL;
-    for(int i = 0; argv[i]; i++) {
-        if(has_globbing(argv[i]))
-            glob(argv[i], flags, NULL, &glob_result);
+    for (int i = 0; argv[i]; i++) {
+        if (has_globbing(argv[i]))
+            ret = glob(argv[i], flags, NULL, &glob_result);
         else
-            glob(argv[i], flags | GLOB_NOCHECK, NULL, &glob_result);
+            ret = glob(argv[i], flags | GLOB_NOCHECK, NULL, &glob_result);
+
+        if (has_globbing(argv[i]) && ret == GLOB_NOMATCH) {
+            write(2, "ls: No match.\n", 15);
+            globfree(&glob_result);
+            free_tab(argv);
+            return NULL;
+        }
         flags = GLOB_APPEND;
     }
     new_args = append_glob_result(&glob_result);

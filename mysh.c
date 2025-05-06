@@ -104,6 +104,9 @@ int execcommand(char *argv, char **env)
     struct stat size;
     linked_list_t *i = *create_env(env);
 
+    arg = do_globbings(arg);
+    if (!arg)
+        return -1;
     if (stat(arg[0], &size) != -1 && S_ISREG(size.st_mode))
         return use_children(env, arg);
     for (; i->next &&
