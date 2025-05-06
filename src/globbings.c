@@ -7,3 +7,11 @@
 
 #include "mysh.h"
 #include <glob.h>
+
+int has_globbing(const char *str)
+{
+    for(int i = 0; str[i]; i++)
+        if (str[i] == '*' || str[i] == '?' || str[i] == '[')
+        return 1;
+    return 0;
+}
