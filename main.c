@@ -6,17 +6,7 @@
 */
 
 #include "include/mysh.h"
-#include "include/list.h"
-#include "include/my.h"
-#include "lib/lib_list/src/list.h"
-#include "lib/my/my.h"
-#include <errno.h>
-#include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/wait.h>
-#include <unistd.h>
+
 
 int main(int argc, char **argv, char **env)
 {
@@ -28,11 +18,11 @@ int main(int argc, char **argv, char **env)
             write(1, "usage: ./mysh\n", 14);
             return 0;
         }
-    get_history();
+    init_history();
     ret = minishell(env);
     destroy_env(create_env(env));
     destroy_env(get_alias());
-    set_history();
+    remove_history();
     while (i)
         free(pop_front(&i));
     free(exit_info());

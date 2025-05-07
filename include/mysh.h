@@ -15,8 +15,24 @@
     #include <sys/signal.h>
     #include <fcntl.h>
     #include <string.h>
+    #include <time.h>
+    #include <unistd.h>
+    #include <stdio.h>
+    #include <stdlib.h>
     #define TCSHENV "NLSPATH=/usr/bin/"
     #define PIPECHAR "|"
+
+typedef struct histo_arg_s {
+    bool h;
+    bool r;
+    long nb;
+}histo_arg_t;
+
+typedef struct history_s {
+    char *cmd;
+    long id;
+    time_t time;
+} history_t;
 
 typedef struct exit_s {
     bool do_exit;
@@ -51,6 +67,7 @@ int check_alias(char *arr, char **env);
 linked_list_t **get_alias(void);
 int aliases(linked_list_t **list, char **arr);
 int my_exit(linked_list_t **list, char **argv);
+int history(linked_list_t **env, char **arg);
 char *create_path(char *arg);
 char test_redir(char *argv, char **env);
 char test_semi(char *line, char **env);
@@ -69,9 +86,15 @@ void destroy_env(linked_list_t **);
 linked_list_t **create_env(char **);
 
 //history
-void get_history(void);
-void set_history(void);
+linked_list_t **hist_info(void);
+int draw_rev_hist(int nb, linked_list_t *node, histo_arg_t args);
+int draw_hist(linked_list_t *node, histo_arg_t args);
+long get_id_ind(bool init);
+void load_history(char *path);
+void init_history(void);
 void add_history(char *cmd);
+void set_history(char *path);
+void remove_history(void);
 
 //globbings
 char **do_globbings(char **argv);

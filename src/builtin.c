@@ -12,9 +12,9 @@
 int test_builtin(char *arg, char **env)
 {
     char *builtin[] = {"env", "setenv", "unsetenv", "cd", "exit", "alias",
-        NULL};
+        "history", NULL};
     int (*tab[])(linked_list_t **, char **) =
-    {&penv, &etenv, &nsetenv, &set_cd, &my_exit, &aliases, NULL};
+    {&penv, &etenv, &nsetenv, &set_cd, &my_exit, &aliases, &history, NULL};
     char **arr = str_skip_arr(arg, " \t");
     int retval = -1;
 
