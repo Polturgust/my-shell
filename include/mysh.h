@@ -29,6 +29,7 @@ typedef struct data_s {
 } data_t;
 
 int minishell(char **env);
+int execcommand(char *argv, char **env);
 char *arr_to_str(char **arr, char sep);
 int use_children(char **env, char **argv);
 int check_alias(char *arr, char **env);

@@ -8,6 +8,7 @@
 MAIN = main.c \
 
 SRCS	=	mysh.c \
+			execcommand.c \
 			src/signal.c \
 			src/env.c \
 			src/env2.c \
