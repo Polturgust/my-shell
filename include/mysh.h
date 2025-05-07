@@ -36,6 +36,8 @@ typedef struct data_s {
     char *data;
 } data_t;
 
+int backticks(char *line, char **env);
+char rd_droite(char *argv, char **env);
 int parenthesis(char *line, char **env);
 char **str_skip_arr(char *str, char *slice);
 int skip_str(char *line, int *count, int idc);

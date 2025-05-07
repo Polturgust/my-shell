@@ -80,7 +80,7 @@ static void shell_prompt_cycle(var_t *vars, char **line, size_t *l, int *verif)
 static void process_command_line(char *line, char **env, var_t **vars)
 {
     if (!handle_variable_builtins(line, vars))
-        exit_info()->ret_val = test_semi(line, env);
+        exit_info()->ret_val = backticks(line, env);
 }
 
 void handle_input_line(char *line, char **env, var_t **vars)

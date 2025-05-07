@@ -28,6 +28,7 @@ SRCS	=	mysh.c \
 			src/and_or.c \
 			src/skip.c \
 			src/parenthesis.c \
+			src/backticks.c \
 
 NAME	=	42sh
 

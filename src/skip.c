@@ -23,7 +23,7 @@ skip_t *create_skip(char *line)
 linked_list_t *get_skip(void)
 {
     static linked_list_t *skip = NULL;
-    char *arr[] = {"()", "\"\"", "[]", "“”", NULL};
+    char *arr[] = {"()", "\"\"", "[]", "``", NULL};
 
     if (!skip)
         for (int i = 0; arr[i]; i++)
@@ -76,7 +76,7 @@ static int malloc_arr(char *str, int idc, char *slice)
 
     if (idc > my_strlen(str))
         return count;
-    for (; str[idc + count] && !is_in(str[idc + count], slice); count++){
+    for (; idc + count < my_strlen(str) && !is_in(str[idc + count], slice); count++){
         if (is_skip(str[idc + count]))
             skip_str(str, &count, idc);
     }
