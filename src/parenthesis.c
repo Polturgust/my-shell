@@ -39,15 +39,14 @@ int execute_parenth(char **line, char **env)
 
 int parenthesis(char *line, char **env)
 {
-    char **str = str_skip_arr(line, " ");
+    char **str = NULL;
     char *new_line = NULL;
     int retval = 0;
     int count = 0;
 
-    if (!is_in('(', line)){
-        free_tab(str);
+    if (!is_in('(', line))
         return execute_fonc(line, env);
-    }
+    str = str_skip_arr(line, " ");
     if (len_arr(str) > 1 || (*str)[0] != '('){
         dprintf(STDIN_FILENO, "Badly placed ()'s\n");
         free_tab(str);
@@ -58,5 +57,6 @@ int parenthesis(char *line, char **env)
         return 84;
     new_line = strndup(line + 1, count - 2);
     retval = execute_parenth(&new_line, env);
+    free_tab(str);
     return retval;
 }
