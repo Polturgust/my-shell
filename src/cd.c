@@ -106,8 +106,8 @@ int set_cd(linked_list_t **env, char **arg)
 {
     char *path = NULL;
     int retval = 1;
-    char *cwd = getcwd(NULL, 0);
-    char *pwd = my_strconcat(cwd, "/");
+    char *cwd = NULL;
+    char *pwd = NULL;
 
     retval = test_path(env, &path, arg);
     if (retval == 84)
@@ -116,6 +116,8 @@ int set_cd(linked_list_t **env, char **arg)
         return 0;
     if (my_strcmp(arg[1], "-") == 0)
         return prev_cd(env);
+    cwd = getcwd(NULL, 0);
+    pwd = my_strconcat(cwd, "/");
     retval = change_env(env, arg[1]);
     retval = test_args(arg, retval, pwd);
     free(cwd);

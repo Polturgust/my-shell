@@ -91,12 +91,12 @@ char **str_skip_arr(char *str, char *slice)
 
     for (int i = 0; i < my_strlen(str); i++){
         size = malloc_arr(str, i, slice);
-        if (size == 0)
+        if (size == 0 && i >= my_strlen(str))
             break;
-        arr = realloc(arr, sizeof(char *) * (j + 1));
-        arr[j] = malloc(size + 1);
         if (is_in(str[i], slice))
             continue;
+        arr = realloc(arr, sizeof(char *) * (j + 1));
+        arr[j] = malloc(size + 1);
         strncpy(arr[j], str + i, size);
         arr[j][size] = '\0';
         i += size;
