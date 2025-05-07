@@ -33,5 +33,6 @@ void update_cwd(var_t **vars);
 void run_precmd(var_t *vars);
 int handle_eof(var_t *vars);
 
+int handle_variable_builtins(char *line, var_t **vars);
 
 #endif /* VARIABLES_H */
