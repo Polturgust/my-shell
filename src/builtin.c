@@ -15,7 +15,7 @@ int test_builtin(char *arg, char **env)
         "history", NULL};
     int (*tab[])(linked_list_t **, char **) =
     {&penv, &etenv, &nsetenv, &set_cd, &my_exit, &aliases, &history, NULL};
-    char **arr = my_str_to_word_array(arg, " \t");
+    char **arr = str_skip_arr(arg, " \t");
     int retval = -1;
 
     if (!arr)

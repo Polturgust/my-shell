@@ -7,9 +7,11 @@
 
 #include "include/mysh.h"
 
+
 int main(int argc, char **argv, char **env)
 {
     int ret = 0;
+    linked_list_t *i = get_skip();
 
     if (argc == 2)
         if (my_strcmp(argv[1], "-h") == 0){
@@ -21,5 +23,8 @@ int main(int argc, char **argv, char **env)
     destroy_env(create_env(env));
     destroy_env(get_alias());
     remove_history();
+    while (i)
+        free(pop_front(&i));
+    free(exit_info());
     return ret;
 }

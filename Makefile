@@ -8,6 +8,7 @@
 MAIN = main.c \
 
 SRCS	=	mysh.c \
+			execcommand.c \
 			src/signal.c \
 			src/env.c \
 			src/env2.c \
@@ -20,6 +21,15 @@ SRCS	=	mysh.c \
 			src/alias.c \
 			src/history.c \
 			src/history2.c \
+			src/variables/builtin_set_unset.c \
+			src/variables/special_variables.c \
+			src/variables/variables.c \
+			src/variables/handle_var_builtins.c \
+			src/globbings.c \
+			src/and_or.c \
+			src/skip.c \
+			src/parenthesis.c \
+
 
 NAME	=	42sh
 
