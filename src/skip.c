@@ -76,7 +76,8 @@ static int malloc_arr(char *str, int idc, char *slice)
 
     if (idc > my_strlen(str))
         return count;
-    for (; idc + count < my_strlen(str) && !is_in(str[idc + count], slice); count++){
+    for (; idc + count < my_strlen(str) &&
+    !is_in(str[idc + count], slice); count++){
         if (is_skip(str[idc + count]))
             skip_str(str, &count, idc);
     }

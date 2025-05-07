@@ -22,7 +22,7 @@ int test_line(char *line)
     for (; line[i] && line[i] != '`'; i++);
     if (i > my_strlen(line))
         return 84;
-    return 1;   
+    return 1;
 }
 
 char *replace_back(void)
@@ -51,7 +51,7 @@ int exec_backticks(char **arr, int i, char **env)
     char *tmp = NULL;
     int j = 1;
 
-    for (;arr[i][j] && arr[i][j] != '`'; j++);
+    for (; arr[i][j] && arr[i][j] != '`'; j++);
     tmp = strndup(arr[i] + 1, j - 1);
     fonc = my_strconcat(tmp, "> tmp");
     free(tmp);
@@ -62,17 +62,8 @@ int exec_backticks(char **arr, int i, char **env)
     return 0;
 }
 
-int backticks(char *line, char **env)
+static int bckloop(char **arr, char **env)
 {
-    char **arr = str_skip_arr(line, " ");
-    char *new_line = NULL;
-
-    if (!is_in('`', line)){
-        free_tab(arr);
-        return test_semi(line, env);
-    }
-    if (!arr)
-        return 84;
     for (int i = 0; arr[i]; i++){
         if (test_line(arr[i]) == 84){
             free_tab(arr);
@@ -81,9 +72,23 @@ int backticks(char *line, char **env)
         if (test_line(arr[i]))
             exec_backticks(arr, i, env);
     }
+    return 0;
+}
+
+int backticks(char *line, char **env)
+{
+    char **arr = str_skip_arr(line, " ");
+    char *new_line = NULL;
+
+    if (!arr)
+        return 84;
+    if (!is_in('`', line)){
+        free_tab(arr);
+        return test_semi(line, env);
+    }
+    bckloop(arr, env);
     new_line = arr_to_str(arr, ' ');
     free_tab(arr);
-    printf("%s\n", new_line);
     exit_info()->ret_val = test_semi(new_line, env);
     free(new_line);
     return exit_info()->ret_val;
