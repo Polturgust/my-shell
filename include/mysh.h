@@ -27,6 +27,7 @@ typedef struct data_s {
     char *data;
 } data_t;
 
+int parenthesis(char *line, char **env);
 char **str_skip_arr(char *str, char *slice);
 int skip_str(char *line, int *count, int idc);
 char is_skip(char c);

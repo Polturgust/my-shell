@@ -65,7 +65,7 @@ char rd_droite(char *argv, char **env)
     fd = open(*space, O_CREAT | O_RDWR | O_TRUNC, 00666);
     dup2(fd, STDOUT_FILENO);
     close(fd);
-    retval = execute_fonc(arr[0], env);
+    retval = check_alias(arr[0], env);
     dup2(out, STDOUT_FILENO);
     free_tab(arr);
     free_tab(space);

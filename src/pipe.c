@@ -76,9 +76,12 @@ static int count_pipe(char *line)
 {
     int count = 0;
 
-    for (int i = 0; line[i]; i++)
+    for (int i = 0; line[i]; i++){
+        if (is_skip(line[i]))
+            skip_str(line, &i, i);
         if (line[i] == *PIPECHAR)
             count++;
+    }
     return count;
 }
 

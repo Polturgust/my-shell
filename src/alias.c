@@ -87,13 +87,13 @@ int check_alias(char *arg, char **env)
             arr[0] = my_strdup(((data_t *)i->data)->data);
             arg = arr_to_str(arr, ' ');
             free_tab(arr);
-            retval = execute_fonc(arg, env);
+            retval = parenthesis(arg, env);
             free(arg);
             return retval;
         }
     }
     free_tab(arr);
-    return execute_fonc(arg, env);
+    return parenthesis(arg, env);
 }
 
 char *arr_to_str(char **arr, char sep)
