@@ -20,9 +20,15 @@
     #define TCSHENV "NLSPATH=/usr/bin/"
     #define PIPECHAR "|"
 
+typedef struct histo_arg_s {
+    bool h;
+    bool r;
+    long nb;
+}histo_arg_t;
+
 typedef struct history_s {
     char *cmd;
-    unsigned long id;
+    long id;
     time_t time;
 } history_t;
 
@@ -63,6 +69,13 @@ void destroy_env(linked_list_t **);
 linked_list_t **create_env(char **);
 
 //history
+linked_list_t **hist_info(void);
+int draw_rev_hist(int nb, linked_list_t *node, histo_arg_t args);
+int draw_hist(linked_list_t *node, histo_arg_t args);
+long get_id_ind(bool init);
+void load_history(char *path);
+void init_history(void);
 void add_history(char *cmd);
 void set_history(char *path);
+void remove_history(void);
 #endif /* MYSH_H_ */

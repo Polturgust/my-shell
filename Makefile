@@ -19,6 +19,7 @@ SRCS	=	mysh.c \
 			src/exit.c \
 			src/alias.c \
 			src/history.c \
+			src/history2.c \
 
 NAME	=	42sh
 
