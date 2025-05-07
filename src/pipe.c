@@ -74,16 +74,19 @@ static int count_pipe(char *line)
 {
     int count = 0;
 
-    for (int i = 0; line[i]; i++)
+    for (int i = 0; line[i]; i++){
+        if (is_skip(line[i]))
+            skip_str(line, &i, i);
         if (line[i] == *PIPECHAR)
             count++;
+    }
     return count;
 }
 
 char built_pipe(char *line_cmd, char **env)
 {
     int len_tab = 0;
-    char **cmd_split = my_str_to_word_array(line_cmd, PIPECHAR);
+    char **cmd_split = str_skip_arr(line_cmd, "|");
 
     if (!cmd_split)
         return 84;

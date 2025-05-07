@@ -22,6 +22,7 @@ void push_back(linked_list_t **list, void *data)
     linked_list_t *i = *list;
 
     if (*list == NULL){
+        free(new_node);
         push_front(list, data);
         return;
     }

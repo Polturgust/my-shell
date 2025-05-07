@@ -11,10 +11,10 @@
 
 char rd_gauche(char *argv, char **env)
 {
-    char **arr = my_str_to_word_array(argv, "<");
+    char **arr = str_skip_arr(argv, "<");
     int fd = 0;
     int in = dup(STDIN_FILENO);
-    char **space = my_str_to_word_array(arr[1], " \t");
+    char **space = str_skip_arr(arr[1], " \t");
 
     if (!arr)
         return 84;
@@ -32,11 +32,12 @@ char rd_gauche(char *argv, char **env)
 
 char d_droite(char *argv, char **env)
 {
-    char **arr = my_str_to_word_array(argv, ">");
+    char **arr = str_skip_arr(argv, ">");
     int fd = 0;
     int out = dup(STDOUT_FILENO);
-    char **space = my_str_to_word_array(arr[1], " \t");
+    char **space = str_skip_arr(arr[1], " \t");
 
+    printf("%s\n", *space);
     if (!arr)
         return 84;
     fd = open(*space, O_CREAT | O_RDWR | O_APPEND, 00666);
@@ -51,17 +52,17 @@ char d_droite(char *argv, char **env)
 
 char rd_droite(char *argv, char **env)
 {
-    char **arr = my_str_to_word_array(argv, ">");
+    char **arr = str_skip_arr(argv, ">");
     int fd = 0;
     int out = dup(STDOUT_FILENO);
-    char **space = my_str_to_word_array(arr[1], " \t");
+    char **space = str_skip_arr(arr[1], " \t");
 
     if (!arr)
         return 84;
     fd = open(*space, O_CREAT | O_RDWR | O_TRUNC, 00666);
     dup2(fd, STDOUT_FILENO);
     close(fd);
-    exit_info()->ret_val = execute_fonc(arr[0], env);
+    exit_info()->ret_val = check_alias(arr[0], env);
     dup2(out, STDOUT_FILENO);
     free_tab(arr);
     free_tab(space);
@@ -94,12 +95,12 @@ char test_redir(char *argv, char **env)
 
 char test_semi(char *line, char **env)
 {
-    char **arr = my_str_to_word_array(line, ";");
+    char **arr = str_skip_arr(line, ";");
 
     if (!arr)
         return 84;
     for (int i = 0; arr[i]; i++)
-        exit_info()->ret_val = built_pipe(arr[i], env);
+        exit_info()->ret_val = my_and(arr[i], env);
     free_tab(arr);
     return exit_info()->ret_val;
 }

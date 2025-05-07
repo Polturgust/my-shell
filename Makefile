@@ -25,6 +25,9 @@ SRCS	=	mysh.c \
 			src/variables/variables.c \
 			src/variables/handle_var_builtins.c \
 			src/globbings.c \
+			src/and_or.c \
+			src/skip.c \
+			src/parenthesis.c \
 
 NAME	=	42sh
 
