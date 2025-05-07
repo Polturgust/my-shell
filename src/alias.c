@@ -23,7 +23,7 @@ static data_t *add_value(char *line)
 
 static int parse_alias(char *line)
 {
-    char **tmp = my_str_to_word_array(line, "\" ");
+    char **tmp = str_skip_arr(line, "\" ");
 
     if (len_arr(tmp) < 3){
         free_tab(tmp);
@@ -35,7 +35,7 @@ static int parse_alias(char *line)
 
 int test_alias(char *line)
 {
-    char **arr = my_str_to_word_array(line, " ");
+    char **arr = str_skip_arr(line, " ");
     data_t *data = NULL;
 
     if (parse_alias(line)){
@@ -76,7 +76,7 @@ linked_list_t **get_alias(void)
 
 int check_alias(char *arg, char **env)
 {
-    char **arr = my_str_to_word_array(arg, " ");
+    char **arr = str_skip_arr(arg, " ");
     int retval = 0;
 
     if (!arr)

@@ -98,7 +98,7 @@ static char *verifpath(char *exec, char *arg)
 
 int execcommand(char *argv, char **env)
 {
-    char **arg = my_str_to_word_array(argv, " \t");
+    char **arg = str_skip_arr(argv, " \t");
     char *buffer = NULL;
     struct stat size;
     linked_list_t *i = *create_env(env);

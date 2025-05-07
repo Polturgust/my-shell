@@ -89,19 +89,20 @@ char **str_skip_arr(char *str, char *slice)
     int j = 0;
     int size = 0;
 
-    for (int i = 0; str[i]; i++){
-        arr = realloc(arr, sizeof(char *) * (j + 1));
+    for (int i = 0; i < my_strlen(str); i++){
         size = malloc_arr(str, i, slice);
         if (size == 0)
             break;
+        arr = realloc(arr, sizeof(char *) * (j + 1));
         arr[j] = malloc(size + 1);
         if (is_in(str[i], slice))
             continue;
-        my_strncpy(arr[j], str + i, size);
+        strncpy(arr[j], str + i, size);
         arr[j][size] = '\0';
         i += size;
         j++;
     }
+    arr = realloc(arr, sizeof(char *) * (j + 1));
     arr[j] = NULL;
     return arr;
 }

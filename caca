@@ -1,0 +1,13 @@
+42sh
+caca
+coding-style-reports.log
+compile_commands.json
+include
+lib
+main.c
+main.o
+Makefile
+mysh.c
+mysh.o
+src
+tests

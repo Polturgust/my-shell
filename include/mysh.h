@@ -7,6 +7,7 @@
 #ifndef MYSH_H_
     #define MYSH_H_
     #include "my.h"
+    #include <string.h>
     #include "list.h"
     #include <sys/stat.h>
     #include <sys/wait.h>
@@ -26,6 +27,10 @@ typedef struct data_s {
     char *data;
 } data_t;
 
+char **str_skip_arr(char *str, char *slice);
+int skip_str(char *line, int *count, int idc);
+char is_skip(char c);
+linked_list_t *get_skip(void);
 int my_or(char *line, char **env);
 int my_and(char *line, char **env);
 int minishell(char **env);

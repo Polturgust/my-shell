@@ -8,6 +8,7 @@
 #include "include/mysh.h"
 #include "include/list.h"
 #include "include/my.h"
+#include "lib/lib_list/src/list.h"
 #include "lib/my/my.h"
 #include <errno.h>
 #include <signal.h>
@@ -20,6 +21,7 @@
 int main(int argc, char **argv, char **env)
 {
     int ret = 0;
+    linked_list_t *i = get_skip();
 
     if (argc == 2)
         if (my_strcmp(argv[1], "-h") == 0){
@@ -29,5 +31,7 @@ int main(int argc, char **argv, char **env)
     ret = minishell(env);
     destroy_env(create_env(env));
     destroy_env(get_alias());
+    while (i)
+        free(pop_front(&i));
     return ret;
 }

@@ -85,7 +85,7 @@ static int count_pipe(char *line)
 char built_pipe(char *line_cmd, char **env)
 {
     int len_tab = 0;
-    char **cmd_split = my_str_to_word_array(line_cmd, PIPECHAR);
+    char **cmd_split = str_skip_arr(line_cmd, "|");
     int retval = 0;
 
     if (!cmd_split)
