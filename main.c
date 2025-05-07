@@ -33,5 +33,6 @@ int main(int argc, char **argv, char **env)
     destroy_env(get_alias());
     while (i)
         free(pop_front(&i));
+    free(i);
     return ret;
 }
