@@ -41,6 +41,7 @@ SRCS	=	my_putstr.c	\
 		my_strconcat.c \
 		free_tab.c \
 		file.c \
+		is_exe.c \
 
 OBJS	=	$(SRCS:.c=.o)
 
