@@ -9,6 +9,7 @@
     #include <unistd.h>
     #include <stdlib.h>
 
+int is_exe(char *path);
 char is_in(char c, char *str);
 void free_tab(char **);
 void my_putchar(char c);

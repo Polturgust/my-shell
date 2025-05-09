@@ -24,7 +24,7 @@ static int errorcomm(char *buffer, struct stat *size, char *arg)
         write(2, ": Permission denied.\n", 21);
         return -1;
     }
-    if (stat(buffer, size) == -1){
+    if (!is_exe(buffer)){
         free(buffer);
         write(2, arg, my_strlen(arg));
         write(2, ": Command not found.\n", 21);

@@ -9,6 +9,7 @@
     #include <unistd.h>
     #include <stdlib.h>
 
+int is_exe(char *path);
 char is_in(char c, char *str);
 void free_tab(char **);
 void my_putchar(char c);
@@ -48,5 +49,6 @@ int str_to_int(char *str);
 void fill_arr(char **arr, char *str, char *slice);
 char *my_strconcat(char *str1, char *str2);
 char *get_file(char *path);
+int is_exe(char *path);
 
 #endif /* MY_H_ */
