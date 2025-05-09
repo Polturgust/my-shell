@@ -66,6 +66,8 @@ linked_list_t **get_alias(void)
 
     if (!file)
         return &alias;
+    if (alias != NULL)
+        return &alias;
     while (getline(&line, &size, file) != -1)
         if (my_strncmp("alias ", line, 6) == 0 && !parse_alias(line))
             push_front(&alias, add_value(line));
