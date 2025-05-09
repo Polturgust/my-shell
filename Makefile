@@ -29,8 +29,8 @@ SRCS	=	mysh.c \
 			src/and_or.c \
 			src/skip.c \
 			src/parenthesis.c \
-			src/inhibitors.c
-
+			src/inhibitors.c \
+			src/event.c \
 
 NAME	=	42sh
 
