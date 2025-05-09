@@ -63,6 +63,7 @@ int execcommand(char *argv, char **env)
     struct stat size;
     linked_list_t *i = *create_env(env);
 
+    arg = remove_quotes(arg);
     arg = do_globbings(arg);
     if (!arg)
         return -1;

@@ -99,4 +99,7 @@ void remove_history(void);
 //globbings
 char **do_globbings(char **argv);
 
+//inhibitors
+char **remove_quotes(char **args);
+
 #endif /* MYSH_H_ */

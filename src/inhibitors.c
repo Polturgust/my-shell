@@ -32,3 +32,16 @@ static char *remove_enclosing_quotes(char *str)
     }
     return my_strdup(str);
 }
+
+char **remove_quotes(char **args)
+{
+    if (!args)
+        return NULL;
+
+    for (int i = 0; args[i]; i++) {
+        char *clean = remove_enclosing_quotes(args[i]);
+        free(args[i]);
+        args[i] = clean;
+    }
+    return args;
+}
