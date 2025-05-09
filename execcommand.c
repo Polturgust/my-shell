@@ -56,6 +56,15 @@ static char *verifpath(char *exec, char *arg)
     return buffer;
 }
 
+static char **modify_arg(char **arg)
+{
+    if (!arg)
+        return NULL;
+    arg = remove_quotes(arg);
+    arg = do_globbings(arg);
+    return arg;
+}
+
 int execcommand(char *argv, char **env)
 {
     char **arg = my_str_to_word_array(argv, " \t");
@@ -63,8 +72,7 @@ int execcommand(char *argv, char **env)
     struct stat size;
     linked_list_t *i = *create_env(env);
 
-    arg = remove_quotes(arg);
-    arg = do_globbings(arg);
+    arg = modify_arg(arg);
     if (!arg)
         return -1;
     if (stat(arg[0], &size) != -1 && S_ISREG(size.st_mode))
