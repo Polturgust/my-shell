@@ -99,4 +99,15 @@ void remove_history(void);
 //globbings
 char **do_globbings(char **argv);
 
+// event
+///////////////////
+//
+// get_event take a str with this format: '!n' or '!cmd'
+// in case of cmd is found or if an event occured at the n-th indice, get_event
+// return the command. Else get_event return NULL and exit_into()->ret_val is
+// set at 1.
+//
+///////////////////
+char *get_event(char *event)
+
 #endif /* MYSH_H_ */
