@@ -99,6 +99,10 @@ void remove_history(void);
 //globbings
 char **do_globbings(char **argv);
 
+
+//inhibitors
+char **remove_quotes(char **args);
+
 // event
 ///////////////////
 //
@@ -108,6 +112,6 @@ char **do_globbings(char **argv);
 // set at 1.
 //
 ///////////////////
-char *get_event(char *event)
+char *get_event(char *event);
 
 #endif /* MYSH_H_ */
