@@ -50,5 +50,6 @@ char *my_strconcat(char *str1, char *str2);
 char *get_file(char *path);
 int my_puterror_str(char *str);
 int my_puterror_char(char c);
+int is_exe(char *path);
 
 #endif /* MY_H_ */

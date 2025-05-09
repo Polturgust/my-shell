@@ -42,6 +42,7 @@ SRCS	=	my_putstr.c	\
 		free_tab.c \
 		file.c \
 		error_output.c \
+		is_exe.c \
 
 OBJS	=	$(SRCS:.c=.o)
 

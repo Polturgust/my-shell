@@ -29,7 +29,7 @@ int execute_parenth(char **line, char **env)
     int status;
 
     if (child == 0){
-        test_semi(*line, env);
+        backticks(*line, env);
         exit(0);
     }
     wait(&status);

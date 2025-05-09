@@ -31,6 +31,7 @@ SRCS	=	mysh.c \
 			src/parenthesis.c \
 			src/inhibitors.c \
 			src/event.c \
+			src/backticks.c \
 
 NAME	=	42sh
 

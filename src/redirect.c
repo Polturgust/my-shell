@@ -57,7 +57,7 @@ char rd_droite(char *argv, char **env)
     int out = dup(STDOUT_FILENO);
     char **space = str_skip_arr(arr[1], " \t");
 
-    if (!arr)
+    if (!arr || !space)
         return 84;
     fd = open(*space, O_CREAT | O_RDWR | O_TRUNC, 00666);
     dup2(fd, STDOUT_FILENO);
