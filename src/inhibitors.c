@@ -35,11 +35,12 @@ static char *remove_enclosing_quotes(char *str)
 
 char **remove_quotes(char **args)
 {
+    char *clean = NULL;
+
     if (!args)
         return NULL;
-
     for (int i = 0; args[i]; i++) {
-        char *clean = remove_enclosing_quotes(args[i]);
+        clean = remove_enclosing_quotes(args[i]);
         free(args[i]);
         args[i] = clean;
     }
