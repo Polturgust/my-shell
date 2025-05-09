@@ -23,7 +23,7 @@ skip_t *create_skip(char *line)
 linked_list_t *get_skip(void)
 {
     static linked_list_t *skip = NULL;
-    char *arr[] = {"()", "\"\"", "[]", "“”", NULL};
+    char *arr[] = {"()", "\"\"", "[]", "“”", "''", NULL};
 
     if (!skip)
         for (int i = 0; arr[i]; i++)
