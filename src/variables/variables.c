@@ -4,7 +4,10 @@
 ** File description:
 ** variables.c
 */
+#include <stdlib.h>
+#include <string.h>
 #include "variables.h"
+#include "shell.h"
 
 var_t *find_variable(var_t *vars, const char *key)
 {
@@ -25,7 +28,7 @@ void set_variable(var_t **vars, const char *key, const char *value)
         free(var->value);
         var->value = strdup(value);
     } else {
-        new_var = malloc(sizeof(var_t));
+        new_var = xmalloc(sizeof(var_t));
         new_var->key = strdup(key);
         new_var->value = strdup(value);
         new_var->next = *vars;
@@ -57,14 +60,6 @@ void unset_variable(var_t **vars, const char *key)
             *vars = tmp->next;
         free_var_node(tmp);
         return;
-    }
-}
-
-void print_variables(var_t *vars)
-{
-    while (vars) {
-        printf("%s=%s\n", vars->key, vars->value);
-        vars = vars->next;
     }
 }
 

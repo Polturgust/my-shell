@@ -1,77 +1,34 @@
 ##
 ## EPITECH PROJECT, 2024
-## makefils
+## 42sh
 ## File description:
-## f
+## Makefile
 ##
-
-MAIN = main.c \
-
-SRCS	=	mysh.c \
-			execcommand.c \
-			src/signal.c \
-			src/env.c \
-			src/env2.c \
-			src/cd.c \
-			src/builtin.c \
-			src/pipe.c \
-			src/redirect.c \
-			src/modif_prompt.c \
-			src/exit.c \
-			src/alias.c \
-			src/history.c \
-			src/history2.c \
-			src/variables/builtin_set_unset.c \
-			src/variables/special_variables.c \
-			src/variables/variables.c \
-			src/variables/handle_var_builtins.c \
-			src/globbings.c \
-			src/and_or.c \
-			src/skip.c \
-			src/parenthesis.c \
-			src/inhibitors.c \
-			src/event.c \
-			src/backticks.c \
 
 NAME	=	42sh
 
-OBJS	=	$(SRCS:.c=.o) $(MAIN:.c=.o)
+SRCS	=	$(shell find src -name '*.c' | sort)
 
-LIB =  -L./lib -lmy -llist
+OBJS	=	$(SRCS:.c=.o)
 
-INCLUDE = -I./include/
+CPPFLAGS	+=	-I./include/ -I./src/editor -I./src/expand
 
-CFLAGS	= $(INCLUDE) -g3 $(LIB) -Wall -Wextra
+CFLAGS	+=	-Wall -Wextra
 
-all		: buildlib	$(OBJS)
-		@gcc $(OBJS) -o $(NAME) $(CFLAGS)
-		@cp $(NAME) tests/
+all:	$(NAME)
 
-clean	:
-		@rm -fr $(OBJS)
-		@rm -fr *.gcno
-		@rm -fr *.gcda
+$(NAME):	$(OBJS)
+	$(CC) $(OBJS) -o $(NAME) $(LDFLAGS)
 
-fclean	:	clean fcleanlib
-		@rm -fr $(NAME) $(TNAME)
-		@rm -rf tests/$(NAME)
+clean:
+	rm -f $(OBJS)
 
-buildlib:
-		@make -C ./lib/
+fclean:	clean
+	rm -f $(NAME)
 
-fcleanlib:
-		@make fclean -C ./lib/
+re:	fclean all
 
-re		:	fclean all
+tests_run:	$(NAME)
+	python3 tests/interactive.py ./$(NAME)
 
-TSRC = tests/tests.c \
-
-TNAME = unit_tests
-
-TLIB = $(LIB) -lcriterion --coverage
-
-unit_tests: clean buildlib
-		@gcc $(TSRC) $(SRCS) -o $(TNAME) $(INCLUDE) $(TLIB)
-
-tests_run: unit_tests
-		@./unit_tests && gcovr
+.PHONY: all clean fclean re tests_run

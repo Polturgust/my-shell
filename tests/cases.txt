@@ -1,0 +1,181 @@
+### simple command
+echo hello world
+ls -d /tmp
+### command not found continues
+nothere
+/bin/nothere
+echo still running
+### exit status variables
+false
+echo $status
+true
+echo $?
+### pipes
+echo abc | cat | cat
+printf 'b\na\nc\n' | sort | head -n 2
+### pipe status is the last command
+false | true
+echo $status
+true | false
+echo $status
+### null command between pipes
+ls | | cat
+### null command at start
+| ls
+### null command at end
+ls |
+### separators
+echo a ; echo b ;; echo c
+### and or
+true && echo and1
+false && echo and2
+false || echo or1
+true || echo or2
+ls /nonexist && echo ok || echo failed
+false || false || echo third
+### and missing right side
+ls &&
+### redirections
+echo one > f1 ; echo two >> f1 ; cat < f1
+sort < f1 > f2 ; cat f2
+echo three >> f2 ; tail -n 1 f2
+### redirect missing file
+cat < nonexist
+### redirect bad path
+echo x > /nonexist/dir
+### redirect missing name
+ls >
+### ambiguous output
+ls > a > b
+### ambiguous input
+cat < f1 < f2
+### ambiguous pipe output
+ls > a | cat
+### heredoc
+cat << END
+line one
+line two
+END
+echo after
+### heredoc with variables
+set name = world
+cat << END
+hello $name
+END
+### stdout and stderr together
+ls /nonexist >& err1 ; cat err1
+ls /nonexist >>& err1 ; wc -l < err1
+### quotes
+echo 'single  $HOME *' "double  *" \* a\ b
+echo "a'b" 'a"b'
+echo ''
+echo "" x
+echo "tab	in"
+### unmatched double quote
+echo "abc
+### unmatched single quote
+echo 'abc
+### unmatched backquote
+echo `abc
+### variables
+set a = 1
+set b=2
+echo $a $b ${a}x "$a$b"
+set c
+echo [$c]
+unset a
+echo $b
+### undefined variable
+echo $undefined_variable_x
+echo never
+### variable in single quotes
+set a = 1
+echo '$a' "$a"
+### environment
+setenv FOO bar
+env | grep FOO=
+printenv FOO
+echo $FOO
+unsetenv FOO
+printenv FOO
+### setenv bad name
+setenv 1abc x
+### setenv bad chars
+setenv a-b x
+### setenv too many
+setenv a b c
+### backticks
+echo `echo a b c`
+echo "`echo a b`"
+echo x`echo y`z
+echo `printf 'l1\nl2\n'`
+### globbing
+touch g1.txt g2.txt g3.log
+ls *.txt
+echo g?.*
+echo g[12].txt
+echo '*.txt' "*.txt" \*.txt
+### glob no match
+echo *.none
+echo never
+### subshell
+(echo sub)
+(cd / ; pwd) ; pwd | grep -c /
+(echo a ; echo b) | wc -l
+(exit 3)
+echo $status
+### too many open parens
+( ls
+### too many close parens
+ls )
+### badly placed parens
+echo (a)
+### cd
+cd /tmp
+pwd
+cd /
+pwd
+cd -
+### cd missing
+cd /nonexist
+### cd file
+cd /etc/passwd
+### cd too many
+cd a b
+### cd home
+cd
+pwd | grep -c tmp
+### alias
+alias hi echo hello
+hi there
+alias hi
+alias greet 'echo hi ; echo there'
+greet
+unalias hi
+hi
+### alias loop protection
+alias ls ls -d
+ls /tmp
+### echo
+echo -n no newline
+echo
+echo a    b
+### which
+which ls
+which cd
+which nothere
+### repeat
+repeat 3 echo r
+### exit code
+exit 42
+### exit default status
+false
+exit
+### exit bad
+exit abc
+### comments
+echo a # comment
+# whole line comment
+echo b
+### long pipeline
+seq 1 100 | grep 5 | sort -r | head -n 3 | wc -l
